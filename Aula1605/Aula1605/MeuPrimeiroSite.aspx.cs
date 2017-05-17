@@ -18,7 +18,16 @@ namespace Aula1605
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             txtNome.Text = string.Empty;
+            txtDescricao.Text=string.Empty
             chkAtivo.Checked = false;
+
+            if(ViewState["controle"]==null)
+            ViewState.Add("controle", "i");
+            else
+            { int quantidadeClique = (int)ViewState["controle"];
+                quantidadeClique++;
+                ViewState["controle"] = quantidadeClique;
+            }
                
         }
 

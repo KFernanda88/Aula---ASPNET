@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Xml.Linq;
 
 namespace Aula1605.Models
 {
@@ -15,8 +16,8 @@ namespace Aula1605.Models
         [Required]
         public string Nome { get; set; }
 
-        Display (Name = "Descrição")
-        public string Descrição { get; set; }
+        [Display (Name = "Descricao")]
+        public string Descricao { get; set; }
 
 
         public bool Ativo { get; set; }
